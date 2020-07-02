@@ -49,7 +49,7 @@ app.post('/', function(req, res) {
     })
   })
 
-  // request.write(jsonData);
+  request.write(jsonData);
   request.end();
 })
 
@@ -57,7 +57,7 @@ app.post('/failure', function(req, res) {
   res.redirect("/")
 })
 
-app.listen(3000, () => console.log('server is running on port 3000'))
+app.listen(process.env.PORT || 3000, () => console.log('server is running on port 3000'))
 
 
 // e231dee6ef3a414401ba08ced98a3f0f-us3 -- replace url usX -  with us3 (3 instead of X)
